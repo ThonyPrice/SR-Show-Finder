@@ -1,4 +1,4 @@
-@package com.example.restservice.model;
+package com.example.restservice.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -10,10 +10,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * Find documentation of API at https://sverigesradio.se/api/documentation/v2/metoder/program.html
  * The properties was generated at https://www.site24x7.com/tools/json-to-java.html
  * using the response from https://api.sr.se/api/v2/programs/index?format=json&pagination=false
- * */JsonIgnoreProperties(ignoreUnknown = true)
+ * */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class SrResponse {
 	private String copyright;
-	private Program[] programs;
+	private Show[] shows;
 
 	// Getter Methods 
 
@@ -21,8 +22,9 @@ public class SrResponse {
 		return copyright;
 	}
 
-	public Program[] getPrograms() {
-		return programs;
+	@JsonProperty("programs")
+	public Show[] getShows() {
+		return shows;
 	}
 
 	// Setter Methods 
@@ -31,12 +33,13 @@ public class SrResponse {
 		this.copyright = copyright;
 	}
 
-	public void setPrograms( Show[] shows ) {
+	@JsonProperty("programs")
+	public void setShows( Show[] shows ) {
 		this.shows = shows;
 	}
 
 	@Override
 	public String toString() {
-		return "SrResponse [Copyright=" + copyright + ", Programs=" + programs.toString() + "]";
+		return "SrResponse [Copyright=" + copyright + ", Shows=" + shows.toString() + "]";
 	}
 }

@@ -27,13 +27,19 @@
       }
    #+END_SRC
 
-   The data is fetched from SR's public API, it is documented at https://sverigesradio.se/api/documentation/v2/index.html.
    
-** Run
-   Utilizes SR's public API, see 
-   
-   Lorem ipsum...
+** Run Project
+   1. Clone the project, =$ git clone https://github.com/ThonyPrice/SR-Show-Finder.git=
+   2. Change directory, =cd SR-API/rest-service=
+   3. Run, =./mvnw spring-boot:run=
 
+   The application should now serve the API on http://localhost:8080. If not, check output for what port was available.
+   You can now test the API by browsing http://localhost:8080/search?name={your-search-term}.
+      
+*** Dependencies
+    - The data is fetched from SR's public API, hence dependent on it being up. Find its documentation at https://sverigesradio.se/api/documentation/v2/index.html.
+    - Local instance of Java, see [[https://java.com/en/download/help/download_options.html#linux][installation docs]]. The development is made through [[https://wiki.archlinux.org/title/Java#OpenJDK][OpenJDK]].
+    
 ** Limitations
    Lorem ipsum...
 

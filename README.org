@@ -6,24 +6,31 @@
    Accepts a =GET= request with search query at ={ApplicationUrl}/search?{query}= and server the user one of:
    
    #+NAME: show-found
-   #+BEGIN_SRC json <header arguments>
+   #+BEGIN_SRC json
       HttpStatus = 200
       {
-         "message" : "The following show matched the search term <query>:"
-         "name" : "<show name>"
-         "description" : "<show> description>"
+         "message" : "The following show matched the search term <query>:",
+         "name" : "<show name>",
+         "description" : "<show> description>",
          "broadcastinfo" : "<show broadcastinfo>"
       }
-
    #+END_SRC
-   
-   #+RESULTS:
-   : HttpStatus 200
 
-   Minimal application that takes a searchword and then returns information about any show that matches the query.
+   #+NAME: show-not-found
+   #+BEGIN_SRC json
+      HttpStatus = 404
+      {
+         "message" : "No results found - Try a different search term",
+         "name" : null,
+         "description" : null,
+         "broadcastinfo" : null
+      }
+   #+END_SRC
+
+   The data is fetched from SR's public API, it is documented at https://sverigesradio.se/api/documentation/v2/index.html.
    
 ** Run
-   Utilizes SR's public API, see https://sverigesradio.se/api/documentation/v2/index.html.
+   Utilizes SR's public API, see 
    
    Lorem ipsum...
 

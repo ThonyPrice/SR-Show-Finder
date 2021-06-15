@@ -3,7 +3,7 @@
 ** Description
    A RESTful API built with Java Spring Boot that enables searching for a radio show available on SR's public API.
    
-   Accepts a =GET= request with search query at ={ApplicationUrl}/search?{query}= and server the user one of:
+   Accepts a =GET= request with search query at ={ApplicationUrl}/api/search?{query}= and server the user one of:
    
    #+NAME: show-found
    #+BEGIN_SRC json

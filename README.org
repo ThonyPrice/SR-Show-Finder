@@ -1,7 +1,10 @@
 * Search for SR Radio Shows
 
+[[./img/swagger-screenshot.png]]
+
 ** Description
    A RESTful API built with Java Spring Boot that enables searching for a radio show available on SR's public API.
+   Implements Swagger for testing through GUI.
    
    Accepts a =GET= request with search query at ={ApplicationUrl}/search?{query}= and server the user one of:
    
@@ -33,13 +36,16 @@
    2. Change directory, =cd SR-API/rest-service=
    3. Run, =./mvnw spring-boot:run=
 
-   The application should now serve the API on [[http://localhost:8080]]. If not, check output for what port was available.
-   You can now test the API by browsing [[http://localhost:8080/search?name={your-search-term}]].
+   The application should now serve the API on [[http://localhost:8080/api/search]]. If not, check output for what port was available.
+   You can now test the API using Swagger by browsing to [[http://localhost:8080/swagger-ui.html]].
       
-*** Dependencies
+*** Project Dependencies
     - The data is fetched from SR's public API, hence dependent on it being up. Find its documentation at https://sverigesradio.se/api/documentation/v2/index.html.
     - Local instance of Java, see [[https://java.com/en/download/help/download_options.html#linux][installation docs]]. The development is made through [[https://wiki.archlinux.org/title/Java#OpenJDK][OpenJDK]].
     
 ** Limitations
-   Lorem ipsum...
+   - No verification of SR's API response.
+   - No tests.
+   - No deployment wrapper like Docker.
+   - Minimal exception handling.
 

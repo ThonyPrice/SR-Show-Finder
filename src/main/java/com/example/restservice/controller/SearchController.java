@@ -2,8 +2,6 @@ package com.example.restservice.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.boot.web.client.RestTemplateBuilder;
-import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.scheduling.annotation.Async;
@@ -13,15 +11,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.List;
-import java.util.stream.Collectors;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
 import com.example.restservice.model.Show;
 import com.example.restservice.model.SearchResult;
 import com.example.restservice.model.SrResponse;
-import com.example.restservice.RestServiceApplication;
 
 /**
  * Provides a RESTful API to search for shows from SR's API.

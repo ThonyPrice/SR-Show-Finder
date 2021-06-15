@@ -1,7 +1,6 @@
 package com.example.restservice.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Class for Channel - Nested JSON in SR's API response.

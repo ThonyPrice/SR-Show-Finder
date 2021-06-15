@@ -33,8 +33,8 @@
    2. Change directory, =cd SR-API/rest-service=
    3. Run, =./mvnw spring-boot:run=
 
-   The application should now serve the API on http://localhost:8080. If not, check output for what port was available.
-   You can now test the API by browsing http://localhost:8080/search?name={your-search-term}.
+   The application should now serve the API on [[http://localhost:8080]]. If not, check output for what port was available.
+   You can now test the API by browsing [[http://localhost:8080/search?name={your-search-term}]].
       
 *** Dependencies
     - The data is fetched from SR's public API, hence dependent on it being up. Find its documentation at https://sverigesradio.se/api/documentation/v2/index.html.

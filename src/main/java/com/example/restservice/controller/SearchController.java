@@ -21,8 +21,8 @@ import com.example.restservice.model.SrResponse;
 /**
  * Provides a RESTful API to search for shows from SR's API.
  *
- * The search is recieved on application endpoint {applicationUrl}/search.
- * A list of all avaialabe shows are fetched from SR's API and compared to the search.
+ * The search is received on application endpoint {applicationUrl}/search.
+ * A list of all available shows are fetched from SR's API and compared to the search.
  * On a literal match the requesting party is served information about the show.
  * */
 @RestController
@@ -41,7 +41,7 @@ public class SearchController {
 	 * */
 	@GetMapping("/search")
 	public ResponseEntity<?> search(@RequestParam(value = "name", defaultValue = "Så funkar det") String name) {
-		log.info(String.format("==== Request recieved to search for shows matching '%s' =======", name));
+		log.info(String.format("==== Request received to search for shows matching '%s' =======", name));
 		Show result = FindMatchingShows(name);
 		return FormatSearchResult(name, result);
 	}

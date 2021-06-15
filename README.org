@@ -49,7 +49,10 @@
     
 ** Limitations
    - No verification of SR's API response.
-   - No tests.
+   - Input validation.
+   - Extensive unit and integration testing.
+   - Minimal exception handling and fallback.
    - No deployment wrapper like Docker.
-   - Minimal exception handling.
+   - Multiple search results.
+   - Fancy search like starts with or includes.
 

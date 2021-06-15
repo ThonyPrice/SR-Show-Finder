@@ -44,7 +44,7 @@
     - Local instance of Java, see [[https://java.com/en/download/help/download_options.html#linux][installation docs]]. The development is made through [[https://wiki.archlinux.org/title/Java#OpenJDK][OpenJDK]].
      
 *** Project Tests
-    Test are located in ==. 
+    Test are located in =src/test/java/com/example/restservice=. 
     Run them from root directory: =$ ./mvnw test=
     
 ** Limitations

@@ -7,6 +7,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
@@ -39,8 +41,9 @@ public class SearchController {
 	 * @param	name		The search query
 	 * @return	SearchResult	JSON formatted info of search result
 	 * */
-	@GetMapping("/search")
-	public ResponseEntity<?> search(@RequestParam(value = "name", defaultValue = "Så funkar det") String name) {
+	@RequestMapping(method = RequestMethod.GET, value = "/api/search")
+	public ResponseEntity<?> search( @RequestParam(value = "name", required = true, 
+						       defaultValue = "Så funkar det") String name) {
 		log.info(String.format("==== Request received to search for shows matching '%s' =======", name));
 		Show result = FindMatchingShows(name);
 		return FormatSearchResult(name, result);
